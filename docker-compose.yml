@@ -1,0 +1,11 @@
+version: "3"
+services:
+    rstudio:
+        build: .
+        image: tidyverse:latest
+        environment:
+            - PASSWORD=password
+        ports:
+            - 8703:8787
+        volumes:
+            - ./src:/home/rstudio
